@@ -12,7 +12,6 @@ export const site = {
   links: {
     scholar: "https://scholar.google.com/citations?user=P_w6UgMAAAAJ&hl=en",
     chalmers: "https://www.chalmers.se/en/persons/kahlf/",
-    visualLocalization: "https://visuallocalization.net/",
   },
 } as const;
 

@@ -59,17 +59,6 @@ export function Footer() {
                 Google Scholar <ArrowUpRight className="h-3 w-3" />
               </a>
             </li>
-            <li>
-              <a
-                href={site.links.visualLocalization}
-                target="_blank"
-                rel="noreferrer"
-                className="inline-flex items-center gap-1 hover:text-foreground"
-              >
-                Visual Localization benchmark{" "}
-                <ArrowUpRight className="h-3 w-3" />
-              </a>
-            </li>
           </ul>
         </div>
       </div>

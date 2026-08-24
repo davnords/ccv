@@ -26,7 +26,7 @@ export default function Home() {
         <div className="relative mx-auto max-w-[90rem] px-6 py-28 sm:px-8 sm:py-36">
           <div className="max-w-2xl rounded-xl border bg-background/85 p-8 backdrop-blur sm:p-10">
             <h1 className="text-4xl font-semibold tracking-tight sm:text-5xl">
-              Welcome to {site.name}
+              Welcome to the {site.name} Group
             </h1>
             <p className="mt-6 text-lg text-muted-foreground">
               We are the computer vision group at {site.institution}, working on
@@ -165,7 +165,12 @@ export default function Home() {
             <ul className="mt-6 space-y-4">
               {recentPubs.map((pub) => (
                 <li key={pub.title} className="rounded-lg border p-5">
-                  <h3 className="font-medium">{pub.title}</h3>
+                  <div className="flex flex-wrap items-baseline gap-x-3 gap-y-2">
+                    <h3 className="font-medium">{pub.title}</h3>
+                    {pub.distinction ? (
+                      <Badge className="shrink-0">{pub.distinction}</Badge>
+                    ) : null}
+                  </div>
                   <p className="mt-2 text-sm text-muted-foreground">
                     {pub.venue}, {pub.year}
                   </p>

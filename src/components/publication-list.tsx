@@ -3,6 +3,7 @@
 import * as React from "react";
 import { Code2, ExternalLink, FileText } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import { Badge } from "@/components/ui/badge";
 import { Card, CardContent } from "@/components/ui/card";
 import type { Publication } from "@/data/publications";
 
@@ -56,7 +57,12 @@ export function PublicationList({
               {group.items.map((pub) => (
                 <Card key={pub.title}>
                   <CardContent className="p-6">
-                    <h3 className="text-lg font-medium">{pub.title}</h3>
+                    <div className="flex flex-wrap items-baseline gap-x-3 gap-y-2">
+                      <h3 className="text-lg font-medium">{pub.title}</h3>
+                      {pub.distinction ? (
+                        <Badge className="shrink-0">{pub.distinction}</Badge>
+                      ) : null}
+                    </div>
                     <p className="mt-2 text-sm text-muted-foreground">
                       <span className="font-medium text-foreground">Venue:</span>{" "}
                       {pub.venue}

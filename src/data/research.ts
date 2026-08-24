@@ -52,10 +52,7 @@ export const researchAreas: ResearchArea[] = [
     summary:
       "Estimating camera pose in a known scene, and benchmarking how well it holds up long term.",
     description:
-      "Visual localization asks where a camera is, given a map of the scene. The hard part is robustness over time: appearance changes with season, weather and time of day. The group has a long history in this area and runs a public benchmark for long-term localization that the community uses to compare methods.",
-    links: [
-      { label: "Visual Localization benchmark", href: "https://visuallocalization.net/" },
-    ],
+      "Visual localization asks where a camera is, given a map of the scene. The hard part is robustness over time: appearance changes with season, weather and time of day. The group has a long history in this area, including work on revisiting how long-term localization is evaluated.",
   },
   {
     slug: "3d-scene-understanding",

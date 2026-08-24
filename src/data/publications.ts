@@ -7,6 +7,8 @@ export type Publication = {
   venue: string;
   year: number;
   authors: string[];
+  /** Presentation format or award, e.g. "Short Oral", "Spotlight", "Best Paper Award". */
+  distinction?: string;
   links?: { project?: string; paper?: string; code?: string };
 };
 
@@ -27,6 +29,7 @@ export const publications: Publication[] = [
       "Mårten Wadenbäck",
       "Michael Felsberg",
     ],
+    distinction: "Short Oral",
     links: { paper: "https://arxiv.org/abs/2511.15706" },
   },
   {
@@ -44,6 +47,7 @@ export const publications: Publication[] = [
       "Michael Felsberg",
       "Fredrik Kahl",
     ],
+    distinction: "Short Oral",
     links: {
       paper: "https://arxiv.org/abs/2604.04931",
       code: "https://github.com/davnords/LoMa",
@@ -74,6 +78,21 @@ export const publications: Publication[] = [
     links: {
       paper: "https://arxiv.org/abs/2511.17309",
       code: "https://github.com/davnords/mum",
+    },
+  },
+  {
+    title:
+      "Who Handles Orientation? Investigating Invariance in Feature Matching",
+    venue: "CVPR Image Matching Workshop",
+    year: 2026,
+    authors: [
+      "David Nordström",
+      "Johan Edstedt",
+      "Fredrik Kahl",
+      "Georg Bökman",
+    ],
+    links: {
+      paper: "https://arxiv.org/abs/2604.11809",
     },
   },
   {
@@ -132,17 +151,125 @@ export const publications: Publication[] = [
     },
   },
   {
+    title:
+      "Flopping for FLOPs: Leveraging Equivariance for Computational Efficiency",
+    venue: "International Conference on Machine Learning (ICML)",
+    year: 2025,
+    authors: ["Georg Bökman", "David Nordström", "Fredrik Kahl"],
+    distinction: "Spotlight",
+    links: {
+      paper: "https://arxiv.org/abs/2502.05169",
+      code: "https://github.com/georg-bn/flopping-for-flops",
+    },
+  },
+  {
     title: "Uncalibrated Structure from Motion on a Sphere",
-    venue: "International Conference on Computer Vision (ICCV), oral",
+    venue: "International Conference on Computer Vision (ICCV)",
     year: 2025,
     authors: ["Jonathan Ventura", "Viktor Larsson", "Fredrik Kahl"],
+    distinction: "Oral",
     links: {
       project: "https://jonathanventura.github.io/spherical-sfm/",
       code: "https://github.com/jonathanventura/spherical-sfm",
     },
   },
   {
-    title: "Steerers: A framework for rotation equivariant keypoint descriptors",
+    title:
+      "ProHOC: Probabilistic Hierarchical Out-of-Distribution Classification via Multi-Depth Networks",
+    venue: "Conference on Computer Vision and Pattern Recognition (CVPR)",
+    year: 2025,
+    authors: ["Erik Wallin", "Fredrik Kahl", "Lars Hammarstrand"],
+    links: {
+      paper: "https://arxiv.org/abs/2503.21397",
+    },
+  },
+  {
+    title:
+      "Geometric Consistency Refinement for Single Image Novel View Synthesis via Test-Time Adaptation of Diffusion Models",
+    venue: "CVPR EDGE Workshop",
+    year: 2025,
+    authors: ["Josef Bengtson", "David Nilsson", "Fredrik Kahl"],
+    links: {
+      project: "https://gc-ref.github.io/",
+      paper: "https://arxiv.org/abs/2504.08348",
+    },
+  },
+  {
+    title:
+      "Trexplorer Super: Topologically Correct Centerline Tree Tracking of Tubular Objects in CT Volumes",
+    venue:
+      "Medical Image Computing and Computer Assisted Intervention (MICCAI)",
+    year: 2025,
+    authors: [
+      "Roman Naeem",
+      "David Hagerman",
+      "Jennifer Alvén",
+      "Lennart Svensson",
+      "Fredrik Kahl",
+    ],
+    links: {
+      paper: "https://arxiv.org/abs/2507.10881",
+    },
+  },
+  {
+    title: "EdgeGaussians: 3D Edge Mapping via Gaussian Splatting",
+    venue: "Winter Conference on Applications of Computer Vision (WACV)",
+    year: 2025,
+    authors: [
+      "Kunal Chelani",
+      "Assia Benbihi",
+      "Torsten Sattler",
+      "Fredrik Kahl",
+    ],
+    links: {
+      paper: "https://arxiv.org/abs/2409.12886",
+    },
+  },
+  {
+    title:
+      "Obfuscation Based Privacy Preserving Representations are Recoverable Using Neighborhood Information",
+    venue: "International Conference on 3D Vision (3DV)",
+    year: 2025,
+    authors: [
+      "Kunal Chelani",
+      "Assia Benbihi",
+      "Fredrik Kahl",
+      "Torsten Sattler",
+      "Zuzana Kukelova",
+    ],
+    links: {
+      paper: "https://arxiv.org/abs/2409.11536",
+    },
+  },
+  {
+    title:
+      "Addressing Degeneracies in Latent Interpolation for Diffusion Models",
+    venue: "Scandinavian Conference on Image Analysis (SCIA)",
+    year: 2025,
+    authors: ["Erik Landolsi", "Fredrik Kahl"],
+    links: {
+      paper: "https://arxiv.org/abs/2505.07481",
+    },
+  },
+  {
+    title: "Optimizing Gene-Based Testing for Antibiotic Resistance Prediction",
+    venue: "AAAI Workshop on AI for Social Impact",
+    year: 2025,
+    authors: [
+      "David Hagerman",
+      "Anna Johnning",
+      "Roman Naeem",
+      "Fredrik Kahl",
+      "Erik Kristiansson",
+      "Lennart Svensson",
+    ],
+    links: {
+      paper: "https://arxiv.org/abs/2502.14919",
+    },
+  },
+  {
+    title:
+      "Steerers: A framework for rotation equivariant keypoint descriptors",
     venue: "Conference on Computer Vision and Pattern Recognition (CVPR)",
     year: 2024,
     authors: [
@@ -154,9 +281,10 @@ export const publications: Publication[] = [
     links: { paper: "https://arxiv.org/abs/2312.02152" },
   },
   {
-    title: "Adjustable Visual Appearance for Generalizable Novel View Synthesis",
+    title:
+      "Adjustable Visual Appearance for Generalizable Novel View Synthesis",
     venue:
-      "International Conference on Pattern Recognition and Artificial Intelligence (ICPRAI), best paper award",
+      "International Conference on Pattern Recognition and Artificial Intelligence (ICPRAI)",
     year: 2024,
     authors: [
       "Josef Bengtson",
@@ -165,7 +293,95 @@ export const publications: Publication[] = [
       "Marcel Büsching",
       "Fredrik Kahl",
     ],
+    distinction: "Best Paper Award",
     links: { paper: "https://arxiv.org/abs/2306.01344" },
+  },
+  {
+    title: "Affine Steerers for Structured Keypoint Description",
+    venue: "European Conference on Computer Vision (ECCV)",
+    year: 2024,
+    authors: [
+      "Georg Bökman",
+      "Johan Edstedt",
+      "Michael Felsberg",
+      "Fredrik Kahl",
+    ],
+    links: {
+      paper: "https://arxiv.org/abs/2408.14186",
+    },
+  },
+  {
+    title:
+      "ProSub: Probabilistic Open-Set Semi-Supervised Learning with Subspace-Based Out-of-Distribution Detection",
+    venue: "European Conference on Computer Vision (ECCV)",
+    year: 2024,
+    authors: [
+      "Erik Wallin",
+      "Lennart Svensson",
+      "Fredrik Kahl",
+      "Lars Hammarstrand",
+    ],
+    links: {
+      paper: "https://arxiv.org/abs/2407.11735",
+    },
+  },
+  {
+    title: "Learning Structure-from-Motion with Graph Attention Networks",
+    venue: "Conference on Computer Vision and Pattern Recognition (CVPR)",
+    year: 2024,
+    authors: [
+      "Lucas Brynte",
+      "José Pedro Iglesias",
+      "Carl Olsson",
+      "Fredrik Kahl",
+    ],
+    links: {
+      paper: "https://arxiv.org/abs/2308.15984",
+    },
+  },
+  {
+    title:
+      "Trexplorer: Recurrent DETR for Topologically Correct Tree Centerline Tracking",
+    venue:
+      "Medical Image Computing and Computer Assisted Intervention (MICCAI)",
+    year: 2024,
+    authors: [
+      "Roman Naeem",
+      "David Hagerman",
+      "Lennart Svensson",
+      "Fredrik Kahl",
+    ],
+  },
+  {
+    title: "Improving Open-Set Semi-Supervised Learning with Self-Supervision",
+    venue: "Winter Conference on Applications of Computer Vision (WACV)",
+    year: 2024,
+    authors: [
+      "Erik Wallin",
+      "Lennart Svensson",
+      "Fredrik Kahl",
+      "Lars Hammarstrand",
+    ],
+    links: {
+      paper: "https://arxiv.org/abs/2301.10127",
+    },
+  },
+  {
+    title: "SwInception: Local Attention Meets Convolutions",
+    venue:
+      "International Conference on Pattern Recognition and Artificial Intelligence (ICPRAI)",
+    year: 2024,
+    authors: [
+      "David Hagerman",
+      "Roman Naeem",
+      "Jakob Lindqvist",
+      "Carl Lindström",
+      "Fredrik Kahl",
+      "Lennart Svensson",
+    ],
+    links: {
+      paper: "https://arxiv.org/abs/2605.29954",
+    },
   },
   {
     title: "Investigating how ReLU-networks encode symmetries",
@@ -201,12 +417,7 @@ export const publications: Publication[] = [
       "Rotation Averaging with the Chordal Distance: Global Minimizers and Strong Duality",
     venue: "IEEE Transactions on Pattern Analysis and Machine Intelligence",
     year: 2021,
-    authors: [
-      "Anders Eriksson",
-      "Carl Olsson",
-      "Fredrik Kahl",
-      "Tat-Jun Chin",
-    ],
+    authors: ["Anders Eriksson", "Carl Olsson", "Fredrik Kahl", "Tat-Jun Chin"],
     links: {
       paper:
         "http://www.maths.lth.se/matematiklth/personal/calle/papers/eriksson-etal-tpami-2019.pdf",
@@ -215,9 +426,10 @@ export const publications: Publication[] = [
   {
     title:
       "Monocular 3D Object Detection and Box Fitting Trained End-to-End Using Intersection-over-Union Loss",
-    venue: "arXiv preprint",
+    venue: "arXiv",
     year: 2019,
     authors: ["Eskil Jörgensen", "Christopher Zach", "Fredrik Kahl"],
+    distinction: "Best Industry Paper, SSBA 2019",
     links: { paper: "https://arxiv.org/abs/1906.08070" },
   },
   {
@@ -302,5 +514,5 @@ export const publications: Publication[] = [
 ];
 
 export const publicationYears = Array.from(
-  new Set(publications.map((p) => p.year))
+  new Set(publications.map((p) => p.year)),
 ).sort((a, b) => b - a);

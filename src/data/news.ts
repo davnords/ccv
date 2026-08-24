@@ -11,6 +11,14 @@ export type NewsItem = {
 
 export const news: NewsItem[] = [
   {
+    label: "August 2026",
+    tag: "Software",
+    title: "LoMa is now integrated into COLMAP",
+    summary:
+      "Our sparse matcher LoMa is available as a built-in feature matcher in COLMAP, so it can be used directly from the standard reconstruction pipeline.",
+    href: "https://github.com/colmap/colmap/pull/4524",
+  },
+  {
     label: "SIGGRAPH 2026",
     tag: "Publication",
     title: "ParaGram accepted to SIGGRAPH 2026",
