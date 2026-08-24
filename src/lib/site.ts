@@ -3,7 +3,7 @@ export const site = {
   shortName: "CCV",
   institution: "Chalmers University of Technology",
   description:
-    "We are a computer vision research group at Chalmers University of Technology. Our work centres on geometric deep learning and 3D scene understanding, with core problems in 3D reconstruction, correspondences and visual localization.",
+    "We are a computer vision research group at Chalmers University of Technology. Our work centres on geometric deep learning, 3D scene understanding and medical image analysis, with core problems in 3D reconstruction, correspondences and visual localization.",
   contact: {
     // Group-level contact. Update if a shared group address is set up.
     email: "fredrik.kahl@chalmers.se",

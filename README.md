@@ -1,30 +1,37 @@
-# Computer Vision Group — Chalmers University of Technology
+# Chalmers Computer Vision (CCV)
 
-Group website. Next.js (App Router) + TypeScript + Tailwind CSS + shadcn/ui, with light/dark mode via `next-themes`.
+Website for the CCV group at Chalmers University of Technology.
+Next.js (App Router), TypeScript, Tailwind, shadcn/ui, light/dark via `next-themes`.
 
 ## Development
 
 ```bash
 npm install
-npm run dev
+npm run dev     # http://localhost:3000
+npm run build
+npm run lint
 ```
 
-Open http://localhost:3000.
+Build without disturbing a running dev server: `NEXT_DIST_DIR=.next-verify npm run build`.
 
-## Scripts
+## Editing content
 
-- `npm run dev` — dev server
-- `npm run build` — production build
-- `npm run start` — serve the production build
-- `npm run lint` — ESLint
+Content lives in typed modules, not in JSX:
+
+```
+src/lib/site.ts     group name, contact, nav links
+src/data/team.ts    members by role
+src/data/           publications, research, news, lectures, events, opportunities
+```
+
+Portraits go in `public/team/`, referenced by an `image` field on a person; anyone without one gets a placeholder. Empty data files render an empty state, so pages never break.
 
 ## Structure
 
 ```
-src/app/            routes (App Router)
-src/components/     shared components (navbar, theme-provider, mode-toggle)
+src/app/            routes
+src/components/     navbar, footer, page-header, filtered lists
 src/components/ui/  shadcn/ui primitives
-src/lib/utils.ts    `cn` class helper
 ```
 
-Add shadcn components with `npx shadcn@latest add <component>`.
+Add components with `npx shadcn@latest add <component>`.

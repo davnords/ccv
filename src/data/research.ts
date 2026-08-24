@@ -10,7 +10,6 @@ export type ResearchArea = {
 };
 
 export const researchCategories = [
-  "Correspondences",
   "3D Reconstruction",
   "Geometry",
   "Learning",
@@ -22,14 +21,18 @@ export const researchAreas: ResearchArea[] = [
   {
     slug: "image-matching",
     title: "Image Matching and Correspondences",
-    category: "Correspondences",
+    category: "3D Reconstruction",
     summary:
-      "Dense and sparse feature matching, including the RoMa and LoMa families of matchers.",
+      "Dense and sparse feature matching with the RoMa and LoMa matchers; LoMa ships in COLMAP.",
     description:
-      "Correspondence estimation underpins almost everything else in geometric vision. We develop both dense matchers, which produce a warp between two images, and sparse matchers built on detected keypoints. Recent work in this direction includes RoMa v2 and LoMa, and the group received the Best Industry Paper award at the Swedish Symposium on Image Analysis in Örebro, 2026, for its work on dense matching.",
+      "Correspondence estimation underpins almost everything else in geometric vision. We develop both dense matchers, which produce a warp between two images, and sparse matchers built on detected keypoints. Recent work in this direction includes RoMa v2 and LoMa, and the group received the Best Industry Paper award at the Swedish Symposium on Image Analysis in Örebro, 2026, for its work on dense matching. LoMa ships as a built-in feature matcher in COLMAP.",
     links: [
       { label: "RoMa v2 paper", href: "https://arxiv.org/abs/2511.15706" },
       { label: "LoMa code", href: "https://github.com/davnords/LoMa" },
+      {
+        label: "LoMa in COLMAP",
+        href: "https://github.com/colmap/colmap/pull/4524",
+      },
     ],
   },
   {
@@ -76,7 +79,10 @@ export const researchAreas: ResearchArea[] = [
     description:
       "Many estimation problems in multi-view geometry are non-convex, and a local solver gives no guarantee that its answer is the right one. The group has contributed global optimization methods, L-infinity formulations, rotation averaging with strong duality guarantees, and more recently a framework for reducing the algebraic complexity of geometric vision problems, which for two-view triangulation brings the degree down from six to two.",
     links: [
-      { label: "Complexity reduction paper", href: "https://arxiv.org/abs/2503.08142" },
+      {
+        label: "Complexity reduction paper",
+        href: "https://arxiv.org/abs/2503.08142",
+      },
     ],
   },
   {
@@ -88,7 +94,10 @@ export const researchAreas: ResearchArea[] = [
     description:
       "Generative models make it possible to modify captured scenes while keeping them physically and geometrically plausible. R3D2 inserts 3D assets into neural driving scenes using diffusion, which supports scalable and realistic simulation for autonomous driving. Related work looks at multi-view consistent editing when the edit itself changes scene geometry.",
     links: [
-      { label: "R3D2", href: "https://research.zenseact.com/publications/R3D2/" },
+      {
+        label: "R3D2",
+        href: "https://research.zenseact.com/publications/R3D2/",
+      },
       { label: "GeM-NR", href: "https://gem-nr.github.io/" },
     ],
   },
@@ -111,3 +120,10 @@ export const researchAreas: ResearchArea[] = [
       "Several group members work jointly with industry on perception for autonomous systems, including monocular 3D object detection, open-set and hierarchical classification, and simulation for autonomous driving. A number of our PhD students are co-employed with industrial partners such as Zenseact and SAAB.",
   },
 ];
+
+/** Slugs shown in the Featured research section on the home page, in order. */
+export const featuredSlugs = [
+  "image-matching",
+  "symmetry-and-equivariance",
+  "medical-image-analysis",
+] as const;

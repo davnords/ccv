@@ -5,12 +5,14 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { PlaceholderVisual } from "@/components/placeholder-visual";
 import { site } from "@/lib/site";
-import { researchAreas } from "@/data/research";
+import { featuredSlugs, researchAreas } from "@/data/research";
 import { news } from "@/data/news";
 import { publications } from "@/data/publications";
 
 export default function Home() {
-  const featured = researchAreas.slice(0, 3);
+  const featured = featuredSlugs
+    .map((slug) => researchAreas.find((a) => a.slug === slug))
+    .filter((a): a is (typeof researchAreas)[number] => Boolean(a));
   const latestNews = news.slice(0, 4);
   const recentPubs = publications.slice(0, 4);
 
@@ -30,7 +32,8 @@ export default function Home() {
             </h1>
             <p className="mt-6 text-lg text-muted-foreground">
               We are the computer vision group at {site.institution}, working on
-              geometric deep learning and 3D scene understanding.
+              geometric deep learning, 3D scene understanding and medical image
+              analysis.
             </p>
             <div className="mt-8 flex flex-wrap gap-3">
               <Button asChild>
@@ -59,17 +62,18 @@ export default function Home() {
               About the group
             </h2>
             <p className="mt-6 text-muted-foreground">
-              {site.name} is led by Professor Fredrik Kahl at{" "}
-              {site.institution}. Our research focuses on geometric deep
-              learning and 3D scene understanding, with core problems in 3D
-              reconstruction, correspondences and visual localization, and an
-              emphasis on symmetry, equivariance and scalable learning.
+              {site.name} is led by Professor Fredrik Kahl at {site.institution}
+              . Our research focuses on geometric deep learning and 3D scene
+              understanding, with core problems in 3D reconstruction,
+              correspondences and visual localization, and an emphasis on
+              symmetry, equivariance and scalable learning.
             </p>
             <p className="mt-4 text-muted-foreground">
-              Current interests also include generative models and applications
-              in medical image analysis. We work closely with industry, and
-              several of our doctoral students are co-employed with partners
-              such as Zenseact and SAAB.
+              Medical image analysis is a substantial part of the group&apos;s
+              work, carried out together with clinical partners, and current
+              interests also include generative models. We work closely with
+              industry, and several of our doctoral students are co-employed
+              with partners such as Zenseact and SAAB.
             </p>
             <Button asChild variant="outline" className="mt-8">
               <Link href="/team">
@@ -111,7 +115,11 @@ export default function Home() {
                   <p className="flex-1 text-sm text-muted-foreground">
                     {area.summary}
                   </p>
-                  <Button asChild variant="link" className="mt-4 h-auto w-fit p-0">
+                  <Button
+                    asChild
+                    variant="link"
+                    className="mt-4 h-auto w-fit p-0"
+                  >
                     <Link href={`/research/${area.slug}`}>
                       Read more <ArrowRight className="ml-1 h-4 w-4" />
                     </Link>

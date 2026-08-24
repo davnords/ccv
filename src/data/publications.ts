@@ -66,6 +66,23 @@ export const publications: Publication[] = [
     links: { paper: "https://arxiv.org/abs/2505.15441" },
   },
   {
+    title: "Scalable GPU Construction of 3D Voronoi and Power Diagrams",
+    venue: "ACM SIGGRAPH Conference Papers",
+    year: 2026,
+    authors: [
+      "Bernardo Taveira",
+      "Carl Lindström",
+      "Maryam Fatemi",
+      "Lars Hammarstrand",
+      "Fredrik Kahl",
+    ],
+    links: {
+      project: "https://research.zenseact.com/publications/paragram/",
+      paper: "https://arxiv.org/abs/2605.06408",
+      code: "https://github.com/zenseact/paragram",
+    },
+  },
+  {
     title: "MuM: Multi-View Masked Image Modeling for 3D Vision",
     venue: "Conference on Computer Vision and Pattern Recognition (CVPR)",
     year: 2026,
@@ -93,23 +110,6 @@ export const publications: Publication[] = [
     ],
     links: {
       paper: "https://arxiv.org/abs/2604.11809",
-    },
-  },
-  {
-    title: "Scalable GPU Construction of 3D Voronoi and Power Diagrams",
-    venue: "ACM SIGGRAPH Conference Papers",
-    year: 2026,
-    authors: [
-      "Bernardo Taveira",
-      "Carl Lindström",
-      "Maryam Fatemi",
-      "Lars Hammarstrand",
-      "Fredrik Kahl",
-    ],
-    links: {
-      project: "https://research.zenseact.com/publications/paragram/",
-      paper: "https://arxiv.org/abs/2605.06408",
-      code: "https://github.com/zenseact/paragram",
     },
   },
   {
