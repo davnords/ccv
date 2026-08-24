@@ -9,7 +9,6 @@ export type Person = {
   title: string;
   affiliation?: string;
   email?: string;
-  phone?: string;
   website?: string;
   scholar?: string;
   orcid?: string;
@@ -35,10 +34,8 @@ export const team: TeamGroup[] = [
         affiliation:
           "Signal Processing and Biomedical Engineering, Electrical Engineering",
         email: "fredrik.kahl@chalmers.se",
-        phone: "+46 31 772 50 57",
         website: "https://fredkahl.github.io/",
-        scholar:
-          "https://scholar.google.com/citations?user=P_w6UgMAAAAJ&hl=en",
+        scholar: "https://scholar.google.com/citations?user=P_w6UgMAAAAJ&hl=en",
         image: "/team/fredrik-kahl.jpg",
         interests:
           "Geometric deep learning, 3D scene understanding, visual localization, symmetry and equivariance",
@@ -56,7 +53,6 @@ export const team: TeamGroup[] = [
         affiliation:
           "Signal Processing and Biomedical Engineering, Electrical Engineering",
         email: "idah@chalmers.se",
-        phone: "+46 31 772 22 19",
         orcid: "https://orcid.org/0000-0001-9178-6683",
         website: "https://www.chalmers.se/en/persons/idah/",
         image: "/team/ida-haggstrom.jpg",
@@ -69,7 +65,6 @@ export const team: TeamGroup[] = [
         affiliation:
           "Signal Processing and Biomedical Engineering, Electrical Engineering",
         email: "alven@chalmers.se",
-        phone: "+46 31 772 17 58",
         scholar:
           "https://scholar.google.com/citations?user=QmYcKQQAAAAJ&hl=en&oi=ao",
         orcid: "https://orcid.org/0000-0003-4195-9325",
@@ -162,7 +157,6 @@ export const team: TeamGroup[] = [
         name: "Victor Wåhlstrand",
         title: "PhD Student",
         email: "victor.wahlstrand@chalmers.se",
-        phone: "+46 31 772 27 64",
         website: "https://www.chalmers.se/en/persons/vicska/",
         orcid: "https://orcid.org/0000-0001-6569-120X",
         image: "/team/victor-wahlstrand.jpg",
@@ -195,17 +189,33 @@ export const team: TeamGroup[] = [
     members: [
       { name: "Roman Naeem", title: "PhD 2026" },
       { name: "Erik Wallin", title: "PhD 2026", affiliation: "SAAB AB" },
-      { name: "Kunal Chelani", title: "PhD 2025", affiliation: "Ericsson Research" },
+      {
+        name: "Kunal Chelani",
+        title: "PhD 2025",
+        affiliation: "Ericsson Research",
+      },
       { name: "Georg Bökman", title: "PhD 2024", affiliation: "Postdoc, UvA" },
-      { name: "Lucas Brynte", title: "PhD 2024", affiliation: "Lucid Insights AB" },
-      { name: "José Pedro Lopes Iglesias", title: "PhD 2023", affiliation: "Apple Inc." },
+      {
+        name: "Lucas Brynte",
+        title: "PhD 2024",
+        affiliation: "Lucid Insights AB",
+      },
+      {
+        name: "José Pedro Lopes Iglesias",
+        title: "PhD 2023",
+        affiliation: "Apple Inc.",
+      },
       {
         name: "Fredrik Hellström",
         title: "PhD 2023",
         affiliation: "Postdoc, UCL",
       },
       { name: "Carl Toft", title: "PhD 2021", affiliation: "Eigenvision AB" },
-      { name: "Måns Larsson", title: "PhD 2020", affiliation: "Eigenvision AB" },
+      {
+        name: "Måns Larsson",
+        title: "PhD 2020",
+        affiliation: "Eigenvision AB",
+      },
       {
         name: "Jennifer Alvén",
         title: "PhD 2020",
@@ -217,7 +227,11 @@ export const team: TeamGroup[] = [
         affiliation: "Assistant Professor, Lund University",
       },
       { name: "Erik Bylow", title: "PhD 2018", affiliation: "Qualcomm Inc." },
-      { name: "Johan Fredriksson", title: "PhD 2016", affiliation: "Apple Inc." },
+      {
+        name: "Johan Fredriksson",
+        title: "PhD 2016",
+        affiliation: "Apple Inc.",
+      },
       {
         name: "Matilda Landgren",
         title: "PhD 2016",
@@ -225,13 +239,21 @@ export const team: TeamGroup[] = [
       },
       { name: "Fangyuan Jiang", title: "PhD 2015", affiliation: "AutoX Inc." },
       { name: "Linus Svärm", title: "PhD 2015", affiliation: "Kiwaro AB" },
-      { name: "Johannes Ulén", title: "PhD 2014", affiliation: "Eigenvision AB" },
+      {
+        name: "Johannes Ulén",
+        title: "PhD 2014",
+        affiliation: "Eigenvision AB",
+      },
       {
         name: "Yubin Kuang",
         title: "PhD 2014",
         affiliation: "Co-founder, Mapillary",
       },
-      { name: "Petter Strandmark", title: "PhD 2013", affiliation: "Apple Inc." },
+      {
+        name: "Petter Strandmark",
+        title: "PhD 2013",
+        affiliation: "Apple Inc.",
+      },
       {
         name: "Olof Enqvist",
         title: "PhD 2011",

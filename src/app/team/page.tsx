@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import Image from "next/image";
-import { ArrowUpRight, Mail, Phone } from "lucide-react";
+import { ArrowUpRight, Mail } from "lucide-react";
 import { PageHeader } from "@/components/page-header";
 import { PlaceholderVisual } from "@/components/placeholder-visual";
 import { Card, CardContent } from "@/components/ui/card";
@@ -80,12 +80,6 @@ export default function TeamPage() {
                               <Mail className="h-3.5 w-3.5 shrink-0" />
                               <span className="truncate">{person.email}</span>
                             </a>
-                          ) : null}
-                          {person.phone ? (
-                            <span className="inline-flex items-center gap-2 text-sm text-muted-foreground">
-                              <Phone className="h-3.5 w-3.5 shrink-0" />
-                              <span className="truncate">{person.phone}</span>
-                            </span>
                           ) : null}
                           <div className="flex flex-wrap gap-x-4">
                             {person.website ? (
