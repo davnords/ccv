@@ -1,9 +1,11 @@
+import Image from "next/image";
 import Link from "next/link";
 import { ArrowRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { PlaceholderVisual } from "@/components/placeholder-visual";
+import { HeroVisual } from "@/components/hero-visual";
 import { site } from "@/lib/site";
 import { featuredSlugs, researchAreas } from "@/data/research";
 import { news } from "@/data/news";
@@ -20,13 +22,10 @@ export default function Home() {
     <>
       {/* Hero */}
       <section className="relative overflow-hidden border-b">
-        <PlaceholderVisual
-          seed={3}
-          label=""
-          className="absolute inset-0 rounded-none border-0"
-        />
+        <HeroVisual />
+        <div className="pointer-events-none absolute inset-0 bg-gradient-to-r from-background/45 via-background/10 to-transparent" />
         <div className="relative mx-auto max-w-[90rem] px-6 py-28 sm:px-8 sm:py-36">
-          <div className="max-w-2xl rounded-xl border bg-background/85 p-8 backdrop-blur sm:p-10">
+          <div className="max-w-2xl rounded-xl border bg-background/80 p-8 backdrop-blur sm:p-10">
             <h1 className="text-4xl font-semibold tracking-tight sm:text-5xl">
               Welcome to the {site.name} Group
             </h1>
@@ -52,10 +51,13 @@ export default function Home() {
       {/* About */}
       <section className="mx-auto max-w-[90rem] px-6 py-20 sm:px-8">
         <div className="grid items-center gap-12 lg:grid-cols-2">
-          <PlaceholderVisual
-            seed={7}
-            label="Group photo"
-            className="aspect-[4/3] w-full"
+          <Image
+            src="/photos/group-photo.jpg"
+            alt="Group photo of the Chalmers Computer Vision group"
+            width={1800}
+            height={1200}
+            sizes="(min-width: 1024px) 45vw, 100vw"
+            className="aspect-[4/3] w-full rounded-lg border object-cover"
           />
           <div>
             <h2 className="text-3xl font-semibold tracking-tight">
@@ -101,10 +103,20 @@ export default function Home() {
           <div className="mt-10 grid gap-6 md:grid-cols-2 lg:grid-cols-3">
             {featured.map((area, i) => (
               <Card key={area.slug} className="flex flex-col overflow-hidden">
-                <PlaceholderVisual
-                  seed={i + 1}
-                  className="aspect-[16/9] rounded-none border-0 border-b"
-                />
+                {area.image ? (
+                  <Image
+                    src={area.image}
+                    alt={area.title}
+                    width={1200}
+                    height={675}
+                    className="aspect-[16/9] w-full border-b object-cover"
+                  />
+                ) : (
+                  <PlaceholderVisual
+                    seed={i + 1}
+                    className="aspect-[16/9] rounded-none border-0 border-b"
+                  />
+                )}
                 <CardHeader>
                   <Badge variant="secondary" className="w-fit">
                     {area.category}

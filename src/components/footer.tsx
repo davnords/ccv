@@ -28,9 +28,29 @@ export function Footer() {
           <ul className="mt-4 space-y-3 text-sm text-muted-foreground">
             <li className="flex items-start gap-3">
               <Mail className="mt-0.5 h-4 w-4 shrink-0" />
-              <a href={`mailto:${site.contact.email}`} className="hover:text-foreground">
-                {site.contact.email}
-              </a>
+              <span>
+                <a
+                  href={`mailto:${site.contact.email}`}
+                  className="hover:text-foreground"
+                >
+                  {site.contact.email}
+                </a>
+                <span className="block text-xs">General enquiries</span>
+              </span>
+            </li>
+            <li className="flex items-start gap-3">
+              <Mail className="mt-0.5 h-4 w-4 shrink-0" />
+              <span>
+                <a
+                  href={`mailto:${site.contact.pi.email}`}
+                  className="hover:text-foreground"
+                >
+                  {site.contact.pi.email}
+                </a>
+                <span className="block text-xs">
+                  {site.contact.pi.name}, principal investigator
+                </span>
+              </span>
             </li>
             <li className="flex items-start gap-3">
               <MapPin className="mt-0.5 h-4 w-4 shrink-0" />

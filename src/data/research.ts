@@ -6,6 +6,8 @@ export type ResearchArea = {
   category: string;
   summary: string;
   description: string;
+  /** Path under /public, e.g. "/research/loma.jpg" */
+  image?: string;
   links?: { label: string; href: string }[];
 };
 
@@ -26,6 +28,7 @@ export const researchAreas: ResearchArea[] = [
       "Dense and sparse feature matching with the RoMa and LoMa matchers; LoMa ships in COLMAP.",
     description:
       "Correspondence estimation underpins almost everything else in geometric vision. We develop both dense matchers, which produce a warp between two images, and sparse matchers built on detected keypoints. Recent work in this direction includes RoMa v2 and LoMa, and the group received the Best Industry Paper award at the Swedish Symposium on Image Analysis in Örebro, 2026, for its work on dense matching. LoMa ships as a built-in feature matcher in COLMAP.",
+    image: "/research/loma.jpg",
     links: [
       { label: "RoMa v2 paper", href: "https://arxiv.org/abs/2511.15706" },
       { label: "LoMa code", href: "https://github.com/davnords/LoMa" },
@@ -43,6 +46,7 @@ export const researchAreas: ResearchArea[] = [
       "Building known symmetries into networks instead of forcing them to be relearned from data.",
     description:
       "Much of the structure in visual data is governed by symmetry, and a network that has to rediscover that structure from scratch spends capacity doing so. We study how symmetry can be encoded architecturally, what conventional networks learn about symmetry on their own, and how equivariance can be used to make models faster. This line of work includes Steerers, an analysis of how ReLU networks encode symmetries, and Quick ViTs.",
+    image: "/research/flop.png",
     links: [
       { label: "Steerers", href: "https://arxiv.org/abs/2312.02152" },
       { label: "Quick ViTs", href: "https://arxiv.org/abs/2505.15441" },

@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import { ArrowLeft, ArrowUpRight } from "lucide-react";
@@ -59,11 +60,21 @@ export default async function ResearchAreaPage({ params }: Params) {
           ) : null}
         </div>
 
-        <PlaceholderVisual
-          seed={area.slug.length}
-          label="Result figure"
-          className="aspect-[4/3] w-full"
-        />
+        {area.image ? (
+          <Image
+            src={area.image}
+            alt={area.title}
+            width={1500}
+            height={1125}
+            className="w-full rounded-lg border object-cover"
+          />
+        ) : (
+          <PlaceholderVisual
+            seed={area.slug.length}
+            label="Result figure"
+            className="aspect-[4/3] w-full"
+          />
+        )}
       </div>
     </article>
   );

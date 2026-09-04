@@ -29,26 +29,9 @@ export const news: NewsItem[] = [
   {
     label: "ECCV 2026",
     tag: "Publication",
-    title: "RoMa v2 accepted to ECCV 2026",
+    title: "Three main conference papers and two workshop papers at ECCV 2026",
     summary:
-      "RoMa v2 sets a new state of the art in dense image matching and is currently the world's best dense matcher. It will be presented in Malmö.",
-    href: "https://arxiv.org/abs/2511.15706",
-  },
-  {
-    label: "ECCV 2026",
-    tag: "Publication",
-    title: "LoMa accepted to ECCV 2026",
-    summary:
-      "LoMa sets a new state of the art in sparse image matching and is currently the world's best sparse matcher. It will be presented in Malmö.",
-    href: "https://arxiv.org/abs/2604.04931",
-  },
-  {
-    label: "ECCV 2026",
-    tag: "Publication",
-    title: "Quick ViTs accepted to ECCV 2026",
-    summary:
-      "At large scale, insisting that networks rediscover known symmetries is not just inefficient. Our work on speeding up vision transformers through equivariance will be presented at ECCV.",
-    href: "https://arxiv.org/abs/2505.15441",
+      "LoMa (oral), RoMa v2 (oral) and Quick ViTs were accepted to the main conference. RoMa-Ω and a paper on consistent image editing were accepted as workshop papers.",
   },
   {
     label: "SSBA 2026",

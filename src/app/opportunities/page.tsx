@@ -51,7 +51,7 @@ export default function OpportunitiesPage() {
             background and what you would like to work on.
           </p>
           <Button asChild className="mt-6">
-            <a href={`mailto:${site.contact.email}`}>Contact us</a>
+            <a href={`mailto:${site.contact.pi.email}`}>Contact us</a>
           </Button>
         </div>
       </div>

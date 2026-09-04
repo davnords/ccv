@@ -1,6 +1,7 @@
 "use client";
 
 import * as React from "react";
+import Image from "next/image";
 import Link from "next/link";
 import { ArrowRight } from "lucide-react";
 import { Badge } from "@/components/ui/badge";
@@ -39,10 +40,20 @@ export function ResearchList({
       <div className="mt-10 grid gap-6 md:grid-cols-2 xl:grid-cols-3">
         {filtered.map((area, i) => (
           <Card key={area.slug} className="flex flex-col overflow-hidden">
-            <PlaceholderVisual
-              seed={i + 2}
-              className="aspect-[16/9] rounded-none border-0 border-b"
-            />
+            {area.image ? (
+              <Image
+                src={area.image}
+                alt={area.title}
+                width={1200}
+                height={675}
+                className="aspect-[16/9] w-full border-b object-cover"
+              />
+            ) : (
+              <PlaceholderVisual
+                seed={i + 2}
+                className="aspect-[16/9] rounded-none border-0 border-b"
+              />
+            )}
             <CardHeader>
               <Badge variant="secondary" className="w-fit">
                 {area.category}
