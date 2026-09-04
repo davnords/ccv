@@ -78,21 +78,33 @@ export function PublicationList({
                       <div className="mt-4 flex flex-wrap gap-2">
                         {pub.links.project ? (
                           <Button asChild size="sm" variant="secondary">
-                            <a href={pub.links.project}>
+                            <a
+                              href={pub.links.project}
+                              target="_blank"
+                              rel="noreferrer"
+                            >
                               Project <ExternalLink className="ml-2 h-3.5 w-3.5" />
                             </a>
                           </Button>
                         ) : null}
                         {pub.links.paper ? (
                           <Button asChild size="sm" variant="secondary">
-                            <a href={pub.links.paper}>
+                            <a
+                              href={pub.links.paper}
+                              target="_blank"
+                              rel="noreferrer"
+                            >
                               Paper <FileText className="ml-2 h-3.5 w-3.5" />
                             </a>
                           </Button>
                         ) : null}
                         {pub.links.code ? (
                           <Button asChild size="sm" variant="secondary">
-                            <a href={pub.links.code}>
+                            <a
+                              href={pub.links.code}
+                              target="_blank"
+                              rel="noreferrer"
+                            >
                               Code <Code2 className="ml-2 h-3.5 w-3.5" />
                             </a>
                           </Button>

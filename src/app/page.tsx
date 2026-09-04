@@ -1,6 +1,12 @@
 import Image from "next/image";
 import Link from "next/link";
-import { ArrowRight } from "lucide-react";
+import {
+  ArrowRight,
+  ArrowUpRight,
+  Code2,
+  ExternalLink,
+  FileText,
+} from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
@@ -168,6 +174,16 @@ export default function Home() {
                   <p className="mt-1 text-sm text-muted-foreground">
                     {item.summary}
                   </p>
+                  {item.href ? (
+                    <a
+                      href={item.href}
+                      target="_blank"
+                      rel="noreferrer"
+                      className="mt-3 inline-flex items-center gap-1 text-sm font-medium hover:underline"
+                    >
+                      Read more <ArrowUpRight className="h-3.5 w-3.5" />
+                    </a>
+                  ) : null}
                 </li>
               ))}
             </ul>
@@ -197,6 +213,40 @@ export default function Home() {
                   <p className="mt-1 text-sm text-muted-foreground">
                     {pub.authors.join(", ")}
                   </p>
+                  {pub.links ? (
+                    <div className="mt-3 flex flex-wrap gap-4">
+                      {pub.links.project ? (
+                        <a
+                          href={pub.links.project}
+                          target="_blank"
+                          rel="noreferrer"
+                          className="inline-flex items-center gap-1 text-sm font-medium hover:underline"
+                        >
+                          Project <ExternalLink className="h-3.5 w-3.5" />
+                        </a>
+                      ) : null}
+                      {pub.links.paper ? (
+                        <a
+                          href={pub.links.paper}
+                          target="_blank"
+                          rel="noreferrer"
+                          className="inline-flex items-center gap-1 text-sm font-medium hover:underline"
+                        >
+                          Paper <FileText className="h-3.5 w-3.5" />
+                        </a>
+                      ) : null}
+                      {pub.links.code ? (
+                        <a
+                          href={pub.links.code}
+                          target="_blank"
+                          rel="noreferrer"
+                          className="inline-flex items-center gap-1 text-sm font-medium hover:underline"
+                        >
+                          Code <Code2 className="h-3.5 w-3.5" />
+                        </a>
+                      ) : null}
+                    </div>
+                  ) : null}
                 </li>
               ))}
             </ul>

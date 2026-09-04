@@ -30,7 +30,10 @@ export const publications: Publication[] = [
       "Michael Felsberg",
     ],
     distinction: "Short Oral",
-    links: { paper: "https://arxiv.org/abs/2511.15706" },
+    links: {
+      paper: "https://arxiv.org/abs/2511.15706",
+      code: "https://github.com/Parskatt/RoMaV2",
+    },
   },
   {
     title: "LoMa: Local Feature Matching Revisited",
@@ -49,6 +52,7 @@ export const publications: Publication[] = [
     ],
     distinction: "Short Oral",
     links: {
+      project: "https://www.davnords.com/loma",
       paper: "https://arxiv.org/abs/2604.04931",
       code: "https://github.com/davnords/LoMa",
     },
@@ -63,7 +67,10 @@ export const publications: Publication[] = [
       "Fredrik Kahl",
       "Georg Bökman",
     ],
-    links: { paper: "https://arxiv.org/abs/2505.15441" },
+    links: {
+      paper: "https://arxiv.org/abs/2505.15441",
+      code: "https://github.com/davnords/octic-vits",
+    },
   },
   {
     title: "Scalable GPU Construction of 3D Voronoi and Power Diagrams",

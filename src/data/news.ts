@@ -21,9 +21,10 @@ export const news: NewsItem[] = [
   {
     label: "SIGGRAPH 2026",
     tag: "Publication",
-    title: "ParaGram accepted to SIGGRAPH 2026",
+    title:
+      "Scalable GPU Construction of 3D Voronoi and Power Diagrams at SIGGRAPH 2026",
     summary:
-      "Scalable GPU Construction of 3D Voronoi and Power Diagrams has been accepted to SIGGRAPH 2026.",
+      "Building 3D Voronoi and power diagrams entirely on the GPU, at scale. Accepted to the ACM SIGGRAPH 2026 Conference Papers program.",
     href: "https://research.zenseact.com/publications/paragram/",
   },
   {
@@ -32,6 +33,7 @@ export const news: NewsItem[] = [
     title: "Three main conference papers and two workshop papers at ECCV 2026",
     summary:
       "LoMa (oral), RoMa v2 (oral) and Quick ViTs were accepted to the main conference. RoMa-Ω and a paper on consistent image editing were accepted as workshop papers.",
+    href: "https://www.davnords.com/loma",
   },
   {
     label: "SSBA 2026",

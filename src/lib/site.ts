@@ -28,7 +28,7 @@ export const navLinks = [
   // upkeep. The /publications route and its data are untouched, so restoring
   // this line brings the tab back.
   // { href: "/publications", label: "Publications" },
-  { href: "/lectures", label: "Lectures" },
+  { href: "/courses", label: "Courses" },
   { href: "/news", label: "News" },
   { href: "/events", label: "Events" },
   { href: "/opportunities", label: "Opportunities" },

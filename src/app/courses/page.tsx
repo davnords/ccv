@@ -4,24 +4,24 @@ import { PageHeader } from "@/components/page-header";
 import { Badge } from "@/components/ui/badge";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { EmptyState } from "@/components/empty-state";
-import { lectures } from "@/data/lectures";
+import { courses } from "@/data/courses";
 
-export const metadata: Metadata = { title: "Lectures" };
+export const metadata: Metadata = { title: "Courses" };
 
-export default function LecturesPage() {
+export default function CoursesPage() {
   return (
     <>
       <PageHeader
-        title="Lectures"
+        title="Courses"
         subtitle="Courses taught by members of the group."
       />
 
       <div className="mx-auto max-w-[90rem] px-6 py-16 sm:px-8">
-        {lectures.length === 0 ? (
+        {courses.length === 0 ? (
           <EmptyState message="Course listings are being put together." />
         ) : (
           <div className="grid gap-6 md:grid-cols-2 xl:grid-cols-3">
-            {lectures.map((course) => (
+            {courses.map((course) => (
               <Card key={course.code} className="flex flex-col">
                 <CardHeader>
                   <div className="flex flex-wrap items-center gap-2">
